@@ -1,0 +1,112 @@
+/*
+  01-Variables
+
+  *** Colors ***
+  mediumSlateBlue
+  slateBlue
+  darkSlateBlue
+  midnightBlue
+  mintCream
+
+  *** Breakpoints ***
+  768px
+  1024px
+  1400px
+*/
+
+:root {
+	--padding: 1rem;
+}
+
+/*
+  02-Base
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+body {
+	background-color: midnightBlue;
+	color: white;
+	margin: 0;
+}
+
+/*
+  03-Typography
+*/
+
+@font-face {
+	font-family: 'AngleciaProDisplay-Regular';
+	src: url('./fonts/AngleciaProDisplay-Regular-webfont.woff2') format('woff2'),
+		url('./fonts/AngleciaProDisplay-Regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('./fonts/opensans-regular-webfont.woff2') format('woff2'),
+		url('./fonts/opensans-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'OpenSans-Regular', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'AngleciaProDisplay-Regular', 'Times New Roman', Times, serif;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+	h1 {
+		font-size: 5rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	h1 {
+		font-size: 8rem;
+		letter-spacing: -0.03em;
+	}
+}
+
+@media (min-width: 1400px) {
+	h1 {
+		font-size: 20vw;
+	}
+}
+
+/*
+  04-Globals
+*/
+
+/* Page grid */
+.grid {
+	padding: var(--padding);
+}
+
+/*
+  05-Objects
+*/
+
+/*
+  06-Components
+*/
+
+/*
+  07-Utilities
+*/
