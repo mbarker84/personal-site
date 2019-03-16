@@ -54,20 +54,39 @@
 				</ul>
 			</header>
 			<section class="hero">
-				<div class="hero__content">
-					<h1>Hi, I’m Michelle</h1>
-					<p>
-						My name is Michelle Barker. I’m a Front End Developer at
-						<a href="http://ordoo.co.uk">Ordoo</a>, publisher of front end blog
-						<a href="https://css-irl.info">CSS {In Real Life}</a>, and a Mozilla
-						Tech Speaker.
-					</p>
+				<div class="grid grid--hero">
+					<figure class="hero__fig">
+						<div class="hero__aspect-box">
+							<img
+								src="./images/avatar.jpg"
+								alt="Profile picture"
+								width="600"
+								height="600"
+							/>
+						</div>
+					</figure>
+					<div class="hero__content">
+						<h1 class="hero__heading">Hi, I’m Michelle</h1>
+						<div class="hero__intro">
+							<p>
+								My name is Michelle Barker. I’m a Front End Developer at
+								<a href="http://ordoo.co.uk">Ordoo</a>, publisher of front end
+								blog <a href="https://css-irl.info">CSS {In Real Life}</a>, and
+								a Mozilla Tech Speaker.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section class="section section--speaking">
-				<h2>Speaking</h2>
-				<h3>Upcoming speaking engagements</h3>
+			<section class="section section--speaking grid">
+				<h2 class="speaking__heading">Speaking</h2>
+				<div class="speaking__intro">
+					<p>
+						I sometimes speak about CSS Grid at conferences and meetups. Here
+						are some of my upcoming speaking engagements:
+					</p>
+				</div>
 				<ul class="speaking__list">
 					<li class="speaking__item">
 						<h4>Building Intelligent Layouts with CSS Grid</h4>
@@ -88,6 +107,7 @@
 		</div>
 
 		<svg
+			class="svg-sprite"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 40 40"
 			width="0"
@@ -118,33 +138,6 @@
 						d="M7.6 29.2c0 .1-.2.1-.3.1-.2-.1-.3-.2-.2-.3 0-.1.2-.1.3-.1.1.1.2.2.2.3zm-.3-.2M8.4 30.1c-.1.1-.3 0-.4-.1-.1-.1-.2-.3-.1-.4.1-.1.3 0 .4.1.2.1.2.3.1.4zm-.2-.2M9.2 31.3c-.1.1-.3 0-.4-.2-.1-.2-.1-.4 0-.5.1-.1.3 0 .4.2.1.2.1.4 0 .5zm0 0M10.3 32.4c-.1.1-.3.1-.5-.1s-.2-.4-.1-.5c.1-.1.3-.1.5.1.1.1.2.4.1.5zm0 0M11.7 33c0 .2-.3.2-.5.2-.2-.1-.4-.3-.3-.4 0-.2.3-.2.5-.2.2.1.4.3.3.4zm0 0M13.4 33.1c0 .2-.2.3-.4.3s-.4-.1-.4-.3c0-.2.2-.3.4-.3s.4.2.4.3zm0 0M14.9 32.9c0 .2-.1.3-.4.4-.2 0-.4-.1-.5-.2 0-.2.1-.3.4-.4.3-.1.5 0 .5.2zm0 0"
 					/>
 				</g>
-			</defs>
-		</svg>
-
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 787.1 843.3">
-			<defs>
-				<g id="triangles" fill="#FFFFFF">
-					<path d="M261.3 843.3L.9 362.3h524.2M132 119.8h262.1L262.2 360.3z" />
-					<path
-						d="M130.2 601.8L0 361.3h262.1M780.3 365.3L655.2 593.5 531.7 365.3h248.6m6.8-4H525l130.2 240.5 131.9-240.5zM457.1 722.5l-65-120.2h131M124.3 124.3L65.2 232.2 6.8 124.3h117.5m6.8-4H.1l65.1 120.2 65.9-120.2zM525.1 360.5l-65-120.2h131M518.3 124.3l-59.1 107.9-58.4-107.9h117.5m6.8-4h-131l65.1 120.2 65.9-120.2zM394 120.4L329.2 0l131 .3"
-					/>
-					<path
-						d="M466.9 4.3l117.5.3L525 112.4 466.9 4.3m-6.7-4L525 120.7 591.2.7l-131-.4zM131.1 360.5l-65-120.2h131"
-					/>
-				</g>
-				<clipPath id="triangle-clip">
-					<path d="M261.3 843.3L.9 362.3h524.2" />
-				</clipPath>
-				<filter id="colorMatrix">
-					<feColorMatrix
-						in="SourceGraphic"
-						type="matrix"
-						values="0.15 0 0 0 0
-										0 0 0 0 0
-										1 1 1 1 2
-										0 0 0 1 0"
-					/>
-				</filter>
 			</defs>
 		</svg>
 	</body>
