@@ -246,6 +246,7 @@ h2 {
 	width: 9rem;
 	height: 9rem;
 	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+	margin-bottom: 1rem;
 }
 
 .hero__fig img {
@@ -259,7 +260,7 @@ h2 {
 		width: 20rem;
 		height: 20rem;
 		position: relative;
-		clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+		margin-bottom: 0;
 	}
 
 	.hero__fig::after {
@@ -323,7 +324,7 @@ h2 {
 	}
 }
 
-/* Speaking */
+/* Sections */
 .section__item {
 	margin-bottom: 1.5rem;
 }
@@ -344,6 +345,41 @@ h2 {
 .section__item h4 a:hover,
 .section__item h4 a:focus {
 	color: var(--secondaryHover);
+}
+
+.section__img-link {
+	margin-bottom: 1rem;
+	display: block;
+	position: relative;
+}
+
+.section__img-link img {
+	filter: grayscale(100%);
+	transition: filter 200ms;
+}
+
+.section__img-link::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: var(--primaryLight);
+	opacity: 0.55;
+	position: absolute;
+	top: 0;
+	left: 0;
+	mix-blend-mode: screen;
+	transition: opacity 200ms;
+}
+
+.section__img-link:hover img,
+.section__img-link:focus img {
+	filter: grayscale(20%);
+}
+
+.section__img-link:hover::after,
+.section__img-link:focus::after {
+	filter: grayscale(20%);
+	opacity: 0;
 }
 
 @media (min-width: 768px) {
