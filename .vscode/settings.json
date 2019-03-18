@@ -1,4 +1,6 @@
 {
 	"css.validate": true,
-	"prettier.stylelintIntegration": false
+	"prettier.stylelintIntegration": false,
+	"indentRainbow.ignoreErrorLanguages": ["plaintext", "css"],
+	"indentRainbow.excludedLanguages": ["css"]
 }
