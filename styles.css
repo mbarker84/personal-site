@@ -24,6 +24,7 @@
 	--secondaryHover: mediumSlateBlue;
 
 	--body: rgb(20, 24, 24);
+	--overlay: linear-gradient(45deg, var(--secondary), var(--primaryLight));
 }
 
 @media (min-width: 1400px) {
@@ -121,6 +122,10 @@ h2 {
 }
 
 @media (min-width: 768px) {
+	body {
+		font-size: 1.2rem;
+	}
+
 	h1 {
 		font-size: 5rem;
 	}
@@ -132,7 +137,7 @@ h2 {
 
 @media (min-width: 1024px) {
 	body {
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 	}
 
 	h1 {
@@ -285,12 +290,12 @@ h2 {
 		width: 100%;
 		height: 100%;
 		clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-		background-color: var(--primaryLight);
-		opacity: 0.55;
+		background: var(--overlay);
+		opacity: 0.75;
 		position: absolute;
 		top: 0;
 		left: 0;
-		mix-blend-mode: screen;
+		mix-blend-mode: hard-light;
 	}
 }
 
@@ -379,12 +384,12 @@ h2 {
 	content: '';
 	width: 100%;
 	height: 100%;
-	background-color: var(--primaryLight);
+	background: var(--overlay);
 	opacity: 0.55;
 	position: absolute;
 	top: 0;
 	left: 0;
-	mix-blend-mode: screen;
+	mix-blend-mode: hard-light;
 	transition: opacity 200ms;
 }
 
@@ -481,4 +486,11 @@ footer {
 
 .single-line-link {
 	font-weight: 400;
+	font-size: 1.1rem;
+}
+
+@media (min-width: 1024px) {
+	.single-line-link {
+		font-size: 1.3rem;
+	}
 }
