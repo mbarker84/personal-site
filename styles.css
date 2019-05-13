@@ -79,7 +79,10 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
 	font-weight: 400;
 }
 
@@ -237,6 +240,20 @@ h2 {
 /*
   05-Objects
 */
+
+.bullet-list {
+	list-style-type: disc;
+	color: var(--primary);
+}
+
+.bullet-list__item {
+	margin-left: 1.5rem;
+	padding-left: var(--paddingSmall);
+}
+
+.bullet-list__item a {
+	color: black;
+}
 
 /*
   06-Components
@@ -460,4 +477,8 @@ footer {
 			100px minmax(0, 300px) 100px [wrapper-end] minmax(0, 1fr);
 		gap: 20px;
 	}
+}
+
+.single-line-link {
+	font-weight: 400;
 }
