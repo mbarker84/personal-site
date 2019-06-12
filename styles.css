@@ -251,6 +251,12 @@ h2 {
 	color: var(--primary);
 }
 
+@media (min-width: 660px) {
+	.bullet-list {
+		columns: 2;
+	}
+}
+
 .bullet-list__item {
 	margin-left: 1.5rem;
 	padding-left: var(--paddingSmall);
