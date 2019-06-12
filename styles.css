@@ -266,6 +266,11 @@ h2 {
 	color: black;
 }
 
+.bullet-list__item a:hover,
+.bullet-list__item a:focus {
+	color: var(--secondaryHover);
+}
+
 /*
   06-Components
 */
