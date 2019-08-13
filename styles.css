@@ -288,6 +288,11 @@ h2 {
 	object-fit: cover;
 }
 
+.hero__intro p {
+	font-size: 1.2rem;
+	max-width: 60ch;
+}
+
 @media (min-width: 768px) {
 	.hero__fig {
 		width: 20rem;
@@ -308,6 +313,10 @@ h2 {
 		left: 0;
 		mix-blend-mode: hard-light;
 	}
+
+	.hero__intro p {
+		font-size: 1.6rem;
+	}
 }
 
 @media (min-width: 1024px) {
@@ -322,10 +331,6 @@ h2 {
 		grid-row: 2 / span 2;
 		position: relative;
 		z-index: 1;
-	}
-
-	.hero__content p {
-		font-size: 2rem;
 	}
 
 	.hero__fig {
@@ -354,6 +359,10 @@ h2 {
 
 	.hero__intro {
 		padding-left: 100px;
+	}
+
+	.hero__intro p {
+		font-size: 2rem;
 	}
 }
 
