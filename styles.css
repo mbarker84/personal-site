@@ -140,10 +140,6 @@ h2 {
 	h2 {
 		font-size: 2.8rem;
 	}
-
-	section + section {
-		margin-top: 4rem;
-	}
 }
 
 @media (min-width: 1400px) {
@@ -170,22 +166,8 @@ h2 {
 
 @media (min-width: 1024px) {
 	.page {
-		--padding: 4rem;
-	}
-
-	.page::after {
-		position: fixed;
-		top: 0;
-		left: 0;
-		content: '';
-		display: block;
-		pointer-events: none;
-		width: calc(100% - 4rem);
-		height: calc(100vh - 4rem);
-		border: 2rem solid;
-		border-image: linear-gradient(to top, var(--primary), var(--primaryLight))
-			30;
-		z-index: 2;
+		--padding: 2rem;
+		padding: 0;
 	}
 }
 
@@ -231,7 +213,7 @@ h2 {
 
 @media (min-width: 1024px) {
 	.header {
-		padding: var(--padding);
+		padding: var(--padding) calc(var(--padding) + 3rem);
 	}
 }
 
@@ -267,6 +249,10 @@ h2 {
 /*
   06-Components
 */
+.hero {
+	background: #1c1f20;
+	color: white;
+}
 
 .hero__fig {
 	width: 9rem;
@@ -284,6 +270,15 @@ h2 {
 .hero__intro p {
 	font-size: 1.2rem;
 	max-width: 60ch;
+}
+
+.hero a {
+	color: var(--primaryLight);
+}
+
+.hero a:hover,
+.hero a:focus {
+	color: var(--secondaryHover);
 }
 
 @media (min-width: 768px) {
@@ -360,6 +355,10 @@ h2 {
 }
 
 /* Sections */
+.section:nth-child(even) {
+	background-color: rgba(166, 240, 237, 0.22);
+}
+
 .section__item {
 	margin-bottom: 1.5rem;
 }
@@ -421,7 +420,7 @@ h2 {
 	.section__list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 40px 40px;
+		gap: 2.25rem;
 	}
 
 	@supports (display: grid) {
@@ -436,6 +435,10 @@ h2 {
 }
 
 @media (min-width: 1024px) {
+	.section {
+		padding: 4rem 0;
+	}
+
 	.section__heading {
 		grid-column: wrapper;
 		margin: 0;
@@ -479,7 +482,13 @@ footer {
 
 @media (min-width: 768px) {
 	footer {
-		margin-top: 6rem;
+		margin-top: 4rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	footer {
+		padding: var(--padding) calc(var(--padding) + 1rem);
 	}
 }
 
@@ -489,11 +498,21 @@ footer {
 
 @media (min-width: 1024px) {
 	.grid {
+		--min: 2rem;
 		display: grid;
 		grid-template-columns:
-			minmax(0, 1fr) [wrapper-start] minmax(0, 300px) 100px minmax(0, 500px)
-			100px minmax(0, 300px) 100px [wrapper-end] minmax(0, 1fr);
+			minmax(var(--min), 1fr) [wrapper-start] minmax(0, 300px) 100px minmax(
+				0,
+				500px
+			)
+			100px minmax(0, 300px) 100px [wrapper-end] minmax(var(--min), 1fr);
 		gap: 20px;
+	}
+}
+
+@media (min-width: 1424px) {
+	.grid {
+		--min: 6rem;
 	}
 }
 

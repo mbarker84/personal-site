@@ -2,5 +2,8 @@
 	"css.validate": true,
 	"prettier.stylelintIntegration": false,
 	"indentRainbow.ignoreErrorLanguages": ["plaintext", "css"],
-	"indentRainbow.excludedLanguages": ["css"]
+	"indentRainbow.excludedLanguages": [
+		"css"
+	],
+	"editor.formatOnSave": true
 }
