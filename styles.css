@@ -159,17 +159,6 @@ h2 {
 */
 
 /* Page grid */
-.page {
-	padding: var(--padding);
-	position: relative;
-}
-
-@media (min-width: 1024px) {
-	.page {
-		--padding: 2rem;
-		padding: 0;
-	}
-}
 
 /* Header */
 .header {
@@ -177,7 +166,7 @@ h2 {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 0 var(--padding);
+	padding: 1rem;
 	z-index: 1;
 	pointer-events: none;
 }
@@ -213,7 +202,7 @@ h2 {
 
 @media (min-width: 1024px) {
 	.header {
-		padding: var(--padding) calc(var(--padding) + 3rem);
+		padding: 1rem 2rem;
 	}
 }
 
@@ -250,8 +239,11 @@ h2 {
   06-Components
 */
 .hero {
+	--narrow: 0.65rem;
+	--wide: 2rem;
 	background: #1c1f20;
 	color: white;
+	padding: 2rem 0;
 }
 
 .hero__fig {
@@ -312,6 +304,28 @@ h2 {
 		padding: 4rem 0;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		background: radial-gradient(circle at 0% 100%, transparent 10%, #1c1f20 35%),
+			repeating-linear-gradient(
+				-45deg,
+				#151616,
+				#151616 var(--narrow),
+				transparent var(--narrow),
+				transparent var(--wide)
+			),
+			radial-gradient(circle at 75% 10%, transparent 20%, #1c1f20 65%),
+			repeating-linear-gradient(
+				-45deg,
+				#151616,
+				#151616 var(--narrow),
+				transparent var(--narrow),
+				transparent var(--wide)
+			),
+			#1c1f20;
+		background-size: 50%, 50%, 50%, 50%;
+		background-repeat: no-repeat;
+		background-position: top left, top left, bottom right, bottom right;
 	}
 
 	.hero__content {
@@ -356,7 +370,7 @@ h2 {
 
 /* Sections */
 .section:nth-child(even) {
-	background-color: rgba(166, 240, 237, 0.22);
+	background-color: rgb(235, 247, 246);
 }
 
 .section__item {
@@ -476,16 +490,6 @@ h2 {
 }
 
 /* Footer */
-footer {
-	margin-top: 3rem;
-}
-
-@media (min-width: 768px) {
-	footer {
-		margin-top: 4rem;
-	}
-}
-
 @media (min-width: 1024px) {
 	footer {
 		padding: var(--padding) calc(var(--padding) + 1rem);
@@ -495,6 +499,15 @@ footer {
 /*
   07-Utilities
 */
+.grid {
+	padding: 1rem;
+}
+
+@media (min-width: 768px) {
+	.grid {
+		padding: 2rem;
+	}
+}
 
 @media (min-width: 1024px) {
 	.grid {
@@ -507,6 +520,12 @@ footer {
 			)
 			100px minmax(0, 300px) 100px [wrapper-end] minmax(var(--min), 1fr);
 		gap: 20px;
+	}
+
+	@supports (display: grid) {
+		.grid {
+			padding: 4rem 1rem;
+		}
 	}
 }
 
