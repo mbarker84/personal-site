@@ -111,7 +111,7 @@ a:focus {
 
 h2 {
 	padding-bottom: 0.5em;
-	border-bottom: 0.075em solid var(--primaryLight);
+	border-bottom: 0.075em solid var(--headingBorder, var(--primaryLight));
 }
 
 @media (min-width: 768px) {
@@ -370,6 +370,7 @@ h2 {
 
 /* Sections */
 .section:nth-child(even) {
+	--headingBorder: black;
 	background-color: rgb(235, 247, 246);
 }
 
